@@ -1,0 +1,23 @@
+.botoesResultado{
+   -fx-font-veight:bold; 
+   -fx-background-color:#00e676; 
+   -fx-font-size:12;
+   -fx-text-fill:white;
+}
+.botoesResultado:hover{
+   -fx-font-veight:bold; 
+   -fx-background-color:white; 
+   -fx-font-size:12;
+   -fx-text-fill:#00e676;
+   -fx-border-color:#00e676;
+   -fx-border-width:2;
+}
+
+.botoesResultado:pressed{
+   -fx-font-veight:bold; 
+   -fx-background-color:white;
+   -fx-font-size:12;
+   -fx-text-fill:#00e676;
+   -fx-border-color:#00e676;
+   -fx-rotate:10;
+}

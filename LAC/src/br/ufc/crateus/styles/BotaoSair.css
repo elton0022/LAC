@@ -1,0 +1,30 @@
+.botaoSair{
+    -fx-font-weight:bold;
+    -fx-background-color:#f44336; 
+    -fx-background-radius:22;
+    -fx-font-size:16;
+    -fx-text-fill:white;
+}
+
+.botaoSair:hover{
+    -fx-font-weight:bold;
+    -fx-background-color:white; 
+    -fx-background-radius:22;
+    -fx-font-size:16;
+    -fx-text-fill:#f44336;
+    -fx-border-color:#f44336;
+    -fx-border-radius:20;
+    -fx-border-width:3;
+}
+
+.botaoSair:pressed{
+    -fx-font-weight:bold;
+    -fx-background-color:white; 
+    -fx-background-radius:22;
+    -fx-font-size:16;
+    -fx-text-fill:#f44336;
+    -fx-border-color:#f44336;
+    -fx-border-radius:20;
+    -fx-border-width:3;
+    -fx-rotate:10;
+}

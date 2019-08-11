@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="419.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufc.crateus.controller.EspacoController">
+   <children>
+      <ScrollPane layoutX="73.0" layoutY="117.0" prefHeight="194.0" prefWidth="462.0">
+         <content>
+            <GridPane fx:id="grid1" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="73.0" layoutY="48.0" prefHeight="17.0" prefWidth="168.0" text="Escolha o número de vetores:" />
+      <Label layoutX="73.0" layoutY="83.0" prefHeight="17.0" prefWidth="168.0" text="Escolha a dimensão do vetor:" />
+      <TextField fx:id="numVetor" layoutX="241.0" layoutY="44.0" prefHeight="25.0" prefWidth="110.0" />
+      <TextField fx:id="dimVetor" layoutX="241.0" layoutY="79.0" prefHeight="25.0" prefWidth="110.0" />
+      <Button layoutX="453.0" layoutY="79.0" mnemonicParsing="false" onAction="#criaMatrizLC" prefHeight="25.0" prefWidth="82.0" styleClass="botoes" stylesheets="@../br/ufc/crateus/styles/botoesStyles.css" text="OK" />
+      <Button layoutX="73.0" layoutY="334.0" mnemonicParsing="false" onAction="#Sair" prefHeight="37.0" prefWidth="80.0" styleClass="botaoSair" stylesheets="@../br/ufc/crateus/styles/BotaoSair.css" text="Sair" />
+      <Button layoutX="410.0" layoutY="328.0" minWidth="37.0" mnemonicParsing="false" onAction="#solucao" prefHeight="31.0" prefWidth="123.0" styleClass="botoesResultado" stylesheets="@../br/ufc/crateus/styles/botaoResultado.css" text="Solução" />
+   </children>
+</AnchorPane>

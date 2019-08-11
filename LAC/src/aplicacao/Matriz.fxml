@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="618.0" style="-fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufc.crateus.controller.MatrizController">
+   <children>
+      <Button fx:id="soma" layoutX="267.0" layoutY="254.0" mnemonicParsing="false" onAction="#criaMatriz" prefHeight="17.0" prefWidth="53.0" styleClass="botoes" stylesheets="@../br/ufc/crateus/styles/botoesStyles.css" text="OK" />
+      <MenuBar layoutX="14.0" layoutY="253.0" prefHeight="25.0" prefWidth="165.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Selecione a operacao">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#acionarCofatora" text="Matriz cofatora" />
+                  <MenuItem mnemonicParsing="false" onAction="#acionarPotencia" text="Potencia" />
+                  <MenuItem mnemonicParsing="false" onAction="#acionarMultiplicaçãoEscalar" text="Multiplicação por escalar" />
+              <MenuItem mnemonicParsing="false" onAction="#acionarSoma" text="Soma" />
+                  <MenuItem mnemonicParsing="false" onAction="#acionarMultiplicaçãoMatrizes" text="Multiplicação de matrizes" />
+                  <MenuItem mnemonicParsing="false" onAction="#acionarTransposta" text="Transposta" />
+                  <MenuItem mnemonicParsing="false" onAction="#acionarInversa" text="Inversa" />
+                  <MenuItem mnemonicParsing="false" onAction="#acionarSubtracao" text="Subtração" />
+                  <MenuItem mnemonicParsing="false" onAction="#acionarAdjunta" text="Matriz adjunta" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="linhas1" layoutX="401.0" layoutY="253.0" prefHeight="25.0" prefWidth="61.0" promptText="linhas" />
+      <TextField fx:id="colunas1" layoutX="479.0" layoutY="253.0" prefHeight="25.0" prefWidth="61.0" promptText="colunas" />
+      <TextField fx:id="colunas2" layoutX="477.0" layoutY="312.0" prefHeight="25.0" prefWidth="61.0" promptText="colunas" />
+      <TextField fx:id="linhas2" layoutX="402.0" layoutY="312.0" prefHeight="25.0" prefWidth="61.0" promptText="linhas" />
+      <Label fx:id="matriz2" layoutX="345.0" layoutY="316.0" prefHeight="17.0" prefWidth="53.0" text="Matriz 2:" />
+      <Label fx:id="matriz1" layoutX="348.0" layoutY="257.0" prefHeight="17.0" prefWidth="53.0" text="Matriz 1:" />
+      <Button fx:id="ok1" layoutX="403.0" layoutY="282.0" mnemonicParsing="false" onAction="#criaMatrizBTN1" prefHeight="25.0" prefWidth="53.0" styleClass="botoes" stylesheets="@../br/ufc/crateus/styles/botoesStyles.css" text="OK" />
+      <Button fx:id="ok2" layoutX="403.0" layoutY="341.0" mnemonicParsing="false" onAction="#criaMatrizMultiplicaoBTN2" prefHeight="25.0" prefWidth="53.0" styleClass="botoes" stylesheets="@../br/ufc/crateus/styles/botoesStyles.css" text="OK" />
+      <TextField fx:id="tamanho" layoutX="189.0" layoutY="253.0" prefHeight="25.0" prefWidth="68.0" promptText="Tamanho" />
+      <TextField fx:id="escalar" alignment="CENTER" layoutX="14.0" layoutY="218.0" prefHeight="25.0" prefWidth="165.0" promptText="Escalar">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <ScrollPane layoutX="441.0" layoutY="43.0" prefHeight="141.0" prefWidth="165.0">
+         <content>
+            <GridPane fx:id="pane3" />
+         </content>
+      </ScrollPane>
+      <ScrollPane fx:id="sp" layoutX="14.0" layoutY="43.0" prefHeight="141.0" prefWidth="165.0">
+         <content>
+            <GridPane fx:id="pane1" />
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="227.0" layoutY="43.0" prefHeight="141.0" prefWidth="165.0">
+         <content>
+            <GridPane fx:id="pane2" />
+         </content>
+      </ScrollPane>
+      <TextField fx:id="potencia" layoutX="189.0" layoutY="284.0" prefHeight="25.0" prefWidth="68.0" promptText="Potência" />
+      <Button fx:id="total" layoutX="397.0" layoutY="107.0" minWidth="37.0" mnemonicParsing="false" onAction="#resultado" prefHeight="25.0" prefWidth="37.0" styleClass="botoesResultado" stylesheets="@../br/ufc/crateus/styles/botaoResultado.css" text="=" />
+      <Label fx:id="operacao" layoutX="200.0" layoutY="89.0" prefHeight="25.0" prefWidth="27.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button id="limpar" fx:id="limpar1" layoutX="14.0" layoutY="188.0" mnemonicParsing="false" onAction="#limpa1" prefHeight="17.0" prefWidth="165.0" styleClass="BotaoLimpar" stylesheets="@../br/ufc/crateus/styles/botaolimpar.css" text="Limpar" />
+      <Button fx:id="limpar2" layoutX="227.0" layoutY="188.0" mnemonicParsing="false" onAction="#limpa2" prefHeight="25.0" prefWidth="165.0" styleClass="BotaoLimpar" stylesheets="@../br/ufc/crateus/styles/botaolimpar.css" text="Limpar" />
+      <Button layoutX="29.0" layoutY="357.0" mnemonicParsing="false" onAction="#sair" prefHeight="30.0" prefWidth="68.0" styleClass="botaoSair" stylesheets="@../br/ufc/crateus/styles/BotaoSair.css" text="Sair" />
+      <Label fx:id="det1" layoutX="123.0" layoutY="13.0" prefHeight="25.0" prefWidth="46.0" />
+      <Label fx:id="det2" layoutX="320.0" layoutY="13.0" prefHeight="25.0" prefWidth="46.0" />
+      <Label fx:id="det3" layoutX="535.0" layoutY="14.0" prefHeight="25.0" prefWidth="68.0" />
+      <Label fx:id="determinante" layoutX="86.0" layoutY="13.0" prefHeight="25.0" prefWidth="37.0" text="det = " />
+      <Label layoutX="283.0" layoutY="13.0" prefHeight="25.0" prefWidth="37.0" text="det = " />
+      <Label layoutX="498.0" layoutY="14.0" prefHeight="25.0" prefWidth="37.0" text="det = " />
+   </children>
+</Pane>
